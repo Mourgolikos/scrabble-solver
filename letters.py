@@ -74,6 +74,17 @@ lettersValues = {
 }
 
 
-print(allLetters)#debugging
-
+lettersInHand = []
 lettersPlayed = []
+
+
+
+########################################################################################################
+########################################################################################################
+
+if __name__ == "__main__":
+    print("letter.py is being run directly")
+
+    print(allLetters)#debugging
+else:
+    print("letter.py is being imported into another module")

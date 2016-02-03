@@ -54,12 +54,20 @@ def getPositionsOfLettersOnBoard(_board=board):
     for j, (rowLetter, row) in enumerate(_board.items(), 1): # enumerate starting from 1
         for i, cell in enumerate(row, 1): # enumerate starting from 1
             if " " not in cell:
-                print("Letter " + cell + " in " + str(i) + "," + str(j))
+                print("Letter " + cell + " in " , i, "," , j)
 
 
 
 
-#################################################################################
-############################################################    TESTING    AREA
-setLetterInPosition("Z","A3")#debugging
-getPositionsOfLettersOnBoard()#debugging
+
+
+########################################################################################################
+########################################################################################################
+
+if __name__ == "__main__":
+    print("board.py is being run directly")
+
+    setLetterInPosition("Z","A3")#debugging
+    getPositionsOfLettersOnBoard()#debugging
+else:
+    print("board.py is being imported into another module")
