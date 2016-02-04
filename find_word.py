@@ -15,8 +15,12 @@ sorted(wordList, key=len) # Although the file is already sorted, in order to be 
 
 for word in wordList:
     if len(word) > maxWordLength: break # Since the list is sorted by the words length, then we don't have to look further.
-    for letter in lettersInHand:
+    _lettersInHand = lettersInHand[:]# Create a new copy with the [:] instead of a reference, because of latter .remove() method
+    for letter in word:
         if letter == "*": continue # "*" is the empty (wildcard) square
-        if letter not in word: break
+        if letter not in _lettersInHand:
+            break
+        else:
+            _lettersInHand.remove(letter)
     else: # None of the break condition are met, so the word does match!
         print(word)#debugging
