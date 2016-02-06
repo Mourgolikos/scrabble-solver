@@ -39,14 +39,7 @@ filename = outputFilePrefix + outputFileExtension
 
 
 
-
-
-########################################################################################################
-########################################################################################################
-
-if __name__ == "__main__":
-    print("prepare_word_list.py is being run directly")
-
+def main_init():
     with open("greek_words.txt", "r", encoding="utf-8") as f:#read all the greek words from the dictionary provided and prepare them
         words = f.readlines()
         print("Reading and converting the words")
@@ -65,6 +58,17 @@ if __name__ == "__main__":
 
 
     print("All is done!")
+
+
+
+
+########################################################################################################
+########################################################################################################
+
+if __name__ == "__main__":
+    print("prepare_word_list.py is being run directly")
+
+    main_init()
 
 else:
     print("prepare_word_list.py is being imported into another module")
