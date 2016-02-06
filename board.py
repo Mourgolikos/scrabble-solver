@@ -75,12 +75,25 @@ def setLetterInPosition(letter,position):
     print("\n\t\t\t\t\t\t\t NEW  BOARD  STATE")
     printBoard(board)
 
+
 def getPositionsOfLettersOnBoard(_board=board):
     printSeparator(25, "_")
     for j, (rowLetter, row) in enumerate(_board.items(), 1): # enumerate starting from 1
         for i, cell in enumerate(row, 1): # enumerate starting from 1
             if " " not in cell:
                 print("\tLetter " + cell + " in " , i, "," , j)
+
+
+def setWordOnBoard(_word, _startingPosition, _horizontal=True):
+    _position = [_startingPosition[0], int(_startingPosition[1:])-1 ] # [letter, number]
+    if _horizontal:
+        for _letter in _word:
+            setLetterInPosition(letter=_letter,position= ''.join(str(pos) for pos in _position))
+            _position[1] += 1 # set position for the next column
+    else:
+        for _letter in _word:
+            setLetterInPosition(letter=_letter,position= ''.join(str(pos) for pos in _position))
+            _position[0] = chr(ord(_position[0]) + 1)#Read the letter as byte, increase it by 1 and convert it back to letter
 
 
 def getWordsOnBoard(_board=board):
@@ -106,13 +119,14 @@ def getWordsOnBoard(_board=board):
 if __name__ == "__main__":
     print("board.py is being run directly")
 
-    setLetterInPosition("Ζ","Α3")#debugging
-    setLetterInPosition("Ω","Α4")#debugging
-    setLetterInPosition("Α","Α5")#debugging
-    setLetterInPosition("Α","Β3")#debugging
-    setLetterInPosition("Ρ","Γ3")#debugging
-    setLetterInPosition("Ι","Δ3")#debugging
-    getPositionsOfLettersOnBoard()#debugging
+    setWordOnBoard("ΖΑΡΙ", "Α3")#debugging
+    setWordOnBoard("ΖΩΑ", "Α3", False)#debugging
+    setWordOnBoard("ΑΛΛΟ", "Α10")#debugging
+    setWordOnBoard("ΛΕΜΟΝΙ", "Α11", False)#debugging
+    setWordOnBoard("ΡΕΜΑ", "Α6", False)#debugging
+    setWordOnBoard("ΚΟΜΜΑΤΙ", "Γ8")#debugging
+    setWordOnBoard("ΚΑΡΕΚΛΑ", "Γ8", False)#debugging
+    setWordOnBoard("ΛΕΚΑΝΗ", "Θ8")#debugging
     getWordsOnBoard()#debugging
 else:
     print("board.py is being imported into another module")
