@@ -5,46 +5,49 @@ from collections import OrderedDict
 board = OrderedDict()
 
        #        1    2    3    4    5    6    7    8    9    10   11   12   13   14   15
-board["A"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#A
-board["B"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#B
-board["C"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#C
-board["D"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#D
-board["E"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#E
-board["F"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#F
-board["G"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#G
-board["H"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#H
-board["I"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#I
-board["J"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#J
-board["K"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#K
-board["L"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#L
-board["M"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#M
-board["N"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#N
-board["O"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#O
+board["Α"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Α
+board["Β"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Β
+board["Γ"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Γ
+board["Δ"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Δ
+board["Ε"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Ε
+board["Ζ"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Ζ
+board["Η"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Η
+board["Θ"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Θ
+board["Ι"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Ι
+board["Κ"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Κ
+board["Λ"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Λ
+board["Μ"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Μ
+board["Ν"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Ν
+board["Ξ"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Ξ
+board["Ο"]=[   " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "  ]#Ο
        #        1    2    3    4    5    6    7    8    9    10   11   12   13   14   15
 
 
 cellBonuses = OrderedDict()
              #        1    2    3    4    5    6    7    8    9    10   11   12   13   14   15
-cellBonuses["A"]=[   "T", " ", " ", "d", " ", " ", " ", "T", " ", " ", " ", "d", " ", " ", "T"  ]#A
-cellBonuses["B"]=[   " ", "D", " ", " ", " ", "t", " ", " ", " ", "t", " ", " ", " ", "D", " "  ]#B
-cellBonuses["C"]=[   " ", " ", "D", " ", " ", " ", "d", " ", "d", " ", " ", " ", "D", " ", " "  ]#C
-cellBonuses["D"]=[   "d", " ", " ", "D", " ", " ", " ", "d", " ", " ", " ", "D", " ", " ", "d"  ]#D
-cellBonuses["E"]=[   " ", " ", " ", " ", "D", " ", " ", " ", " ", " ", "D", " ", " ", " ", " "  ]#E
-cellBonuses["F"]=[   " ", "t", " ", " ", " ", "t", " ", " ", " ", "t", " ", " ", " ", "t", " "  ]#F
-cellBonuses["G"]=[   " ", " ", "d", " ", " ", " ", "d", " ", "d", " ", " ", " ", "d", " ", " "  ]#G
-cellBonuses["H"]=[   "T", " ", " ", "d", " ", " ", " ", "D", " ", " ", " ", "d", " ", " ", "t"  ]#H
-cellBonuses["I"]=[   " ", " ", "d", " ", " ", " ", "d", " ", "d", " ", " ", " ", "d", " ", " "  ]#I
-cellBonuses["J"]=[   " ", "t", " ", " ", " ", "t", " ", " ", " ", "t", " ", " ", " ", "t", " "  ]#J
-cellBonuses["K"]=[   " ", " ", " ", " ", "D", " ", " ", " ", " ", " ", "D", " ", " ", " ", " "  ]#K
-cellBonuses["L"]=[   "d", " ", " ", "D", " ", " ", " ", "d", " ", " ", " ", "D", " ", " ", "d"  ]#L
-cellBonuses["M"]=[   " ", " ", "D", " ", " ", " ", "d", " ", "d", " ", " ", " ", "D", " ", " "  ]#M
-cellBonuses["N"]=[   " ", "D", " ", " ", " ", "t", " ", " ", " ", "t", " ", " ", " ", "D", " "  ]#N
-cellBonuses["O"]=[   "T", " ", " ", "d", " ", " ", " ", "T", " ", " ", " ", "d", " ", " ", "T"  ]#O
+cellBonuses["Α"]=[   "T", " ", " ", "d", " ", " ", " ", "T", " ", " ", " ", "d", " ", " ", "T"  ]#Α
+cellBonuses["Β"]=[   " ", "D", " ", " ", " ", "t", " ", " ", " ", "t", " ", " ", " ", "D", " "  ]#Β
+cellBonuses["Γ"]=[   " ", " ", "D", " ", " ", " ", "d", " ", "d", " ", " ", " ", "D", " ", " "  ]#Γ
+cellBonuses["Δ"]=[   "d", " ", " ", "D", " ", " ", " ", "d", " ", " ", " ", "D", " ", " ", "d"  ]#Δ
+cellBonuses["Ε"]=[   " ", " ", " ", " ", "D", " ", " ", " ", " ", " ", "D", " ", " ", " ", " "  ]#Ε
+cellBonuses["Ζ"]=[   " ", "t", " ", " ", " ", "t", " ", " ", " ", "t", " ", " ", " ", "t", " "  ]#Ζ
+cellBonuses["Η"]=[   " ", " ", "d", " ", " ", " ", "d", " ", "d", " ", " ", " ", "d", " ", " "  ]#Η
+cellBonuses["Θ"]=[   "T", " ", " ", "d", " ", " ", " ", "D", " ", " ", " ", "d", " ", " ", "t"  ]#Θ
+cellBonuses["Ι"]=[   " ", " ", "d", " ", " ", " ", "d", " ", "d", " ", " ", " ", "d", " ", " "  ]#Ι
+cellBonuses["Κ"]=[   " ", "t", " ", " ", " ", "t", " ", " ", " ", "t", " ", " ", " ", "t", " "  ]#Κ
+cellBonuses["Λ"]=[   " ", " ", " ", " ", "D", " ", " ", " ", " ", " ", "D", " ", " ", " ", " "  ]#Λ
+cellBonuses["Μ"]=[   "d", " ", " ", "D", " ", " ", " ", "d", " ", " ", " ", "D", " ", " ", "d"  ]#Μ
+cellBonuses["Ν"]=[   " ", " ", "D", " ", " ", " ", "d", " ", "d", " ", " ", " ", "D", " ", " "  ]#Ν
+cellBonuses["Ξ"]=[   " ", "D", " ", " ", " ", "t", " ", " ", " ", "t", " ", " ", " ", "D", " "  ]#Ξ
+cellBonuses["Ο"]=[   "T", " ", " ", "d", " ", " ", " ", "T", " ", " ", " ", "d", " ", " ", "T"  ]#Ο
              #        1    2    3    4    5    6    7    8    9    10   11   12   13   14   15
 
 
 
 boardSize = [len(board.keys()), len(list(board.values())[0])] #it is now [15,15]
+
+def printSeparator(length, symbol):
+    print("\n" + str(symbol)*int(length))
 
 
 def printBoard(_board = board):
@@ -69,14 +72,29 @@ def setLetterInPosition(letter,position):
         print("Letter " + letter + " added in position " + position) #print a confirmation message
     else:
         print("Check you input!") #the input is somehow not correct, so inform the user!
+    print("\n\t\t\t\t\t\t\t NEW  BOARD  STATE")
     printBoard(board)
 
 def getPositionsOfLettersOnBoard(_board=board):
+    printSeparator(25, "_")
     for j, (rowLetter, row) in enumerate(_board.items(), 1): # enumerate starting from 1
         for i, cell in enumerate(row, 1): # enumerate starting from 1
             if " " not in cell:
-                print("Letter " + cell + " in " , i, "," , j)
+                print("\tLetter " + cell + " in " , i, "," , j)
 
+
+def getWordsOnBoard(_board=board):
+    printSeparator(88, "_")
+    wordsList = {"horizontally"  :[],
+                 "vertically"     :[]}
+    for rowLetter, row in _board.items():
+        wordsList["horizontally"].append(''.join(cell.replace(" ","*") for cell in row))
+    for columnNum in range(boardSize[1]):
+        wordsList["vertically"].append(''.join(word[columnNum] for word in wordsList["horizontally"]))
+
+    print("Horizontal words:\n\t", wordsList["horizontally"])#debugging
+    print("Vertical words:\n\t", wordsList["vertically"])#debugging
+    print("\t\t\tThe '*' represents (here) an empty space on the board that can take any letter")#debugging
 
 
 
@@ -88,7 +106,13 @@ def getPositionsOfLettersOnBoard(_board=board):
 if __name__ == "__main__":
     print("board.py is being run directly")
 
-    setLetterInPosition("Z","A3")#debugging
+    setLetterInPosition("Ζ","Α3")#debugging
+    setLetterInPosition("Ω","Α4")#debugging
+    setLetterInPosition("Α","Α5")#debugging
+    setLetterInPosition("Α","Β3")#debugging
+    setLetterInPosition("Ρ","Γ3")#debugging
+    setLetterInPosition("Ι","Δ3")#debugging
     getPositionsOfLettersOnBoard()#debugging
+    getWordsOnBoard()#debugging
 else:
     print("board.py is being imported into another module")
